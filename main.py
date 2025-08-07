@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Optional CORS for frontend
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -34,3 +34,4 @@ async def run_query(request: Request):
             "status": "error",
             "message": str(e)
         }
+
